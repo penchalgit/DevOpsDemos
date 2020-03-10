@@ -97,6 +97,9 @@ $ ls ~/.helm
 cache  plugins  repository  starters
 ````
 On the kubernetes end, you should see a new deployment called tiller-deploy.
+````
+kubectl get deployment  -n kube-system
+````   
 kubectl get deployment  -n kube-system       
 1NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
 2metrics-server           1/1     1            1           20d
