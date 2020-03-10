@@ -11,6 +11,9 @@ Helm client runs on your laptop, CI/CD pipelines, etc. The installation of helm 
 curl -L https://git.io/get_helm.sh | bash
 
 
+     
+     
+
 Here is the expected installation output:
 Helm v2.16.1 is available. Changing from version .
 Downloading https://get.helm.sh/helm-v2.16.1-linux-amd64.tar.gz
