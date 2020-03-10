@@ -100,16 +100,15 @@ On the kubernetes end, you should see a new deployment called tiller-deploy.
 ````
 kubectl get deployment  -n kube-system
 ````  
-kubectl get deployment  -n kube-system       
 NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
 metrics-server           1/1     1            1           20d
 local-path-provisioner   1/1     1            1           20d
 coredns                  1/1     1            1           20d
 traefik                  1/1     1            1           20d
 tiller-deploy            1/1     1            1           63m
-````sh
-$ kubectl get deployment tiller-deploy -n kube-system -o wide
 ````
+$ kubectl get deployment tiller-deploy -n kube-system -o wide
+````sh
 NAME            READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                  SELECTOR
 tiller-deploy   1/1     1            1           64m   tiller       gcr.io/kubernetes-helm/tiller:v2.16.1   app=helm,name=tiller
 ````
