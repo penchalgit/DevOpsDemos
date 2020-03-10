@@ -99,14 +99,14 @@ cache  plugins  repository  starters
 On the kubernetes end, you should see a new deployment called tiller-deploy.
 ````
 kubectl get deployment  -n kube-system
-````   
+````sh   
 kubectl get deployment  -n kube-system       
-1NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
-2metrics-server           1/1     1            1           20d
-3local-path-provisioner   1/1     1            1           20d
-4coredns                  1/1     1            1           20d
-5traefik                  1/1     1            1           20d
-6tiller-deploy            1/1     1            1           63m
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+metrics-server           1/1     1            1           20d
+local-path-provisioner   1/1     1            1           20d
+coredns                  1/1     1            1           20d
+traefik                  1/1     1            1           20d
+tiller-deploy            1/1     1            1           63m
 ````
 $ kubectl get deployment tiller-deploy -n kube-system -o wide
 NAME            READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                  SELECTOR
