@@ -1,4 +1,3 @@
-
 Helm is a tool created to streamline the installation and management of Kubernetes applications. You can think of Helm like the YUM / APT or Homebrew package managers for Kubernetes.
 
 There are few prerequisites required for a successful installation and operation of Helm.
