@@ -61,28 +61,25 @@ subjects:
 From the manifest definition, we have created a ClusterRoleBinding with cluster-admin permissions to the tiller service account.
 
 Create the resources in Kubernetes using the kubectl command:
-
+````
 $ kubectl apply -f tiller-account-rbac.yaml
 serviceaccount/tiller created
 clusterrolebinding.rbac.authorization.k8s.io/tiller created
-
+````
 Confirm creation of these objects:
-
+````
 $ kubectl get serviceaccount tiller -n kube-system        
 NAME     SECRETS   AGE
 tiller   1         64s
-
+````
 $ kubectl get clusterrolebinding tiller -n kube-system
 NAME     AGE
 tiller   100s
-
+````
 Step 3: Deploy Tiller and Initialize Helm
-The helm init command is used to install Tiller (the Helm server-side component) onto your
-Kubernetes Cluster. Note that this command discovers Kubernetes clusters
-by reading $KUBECONFIG (default ‘~/.kube/config‘) and using the default context.
-If you have multiple clusters, ensure you switch to desired cluster, ref: Easily Manage Multiple Kubernetes Clusters with kubectl & kubectx
+````
 Now initialize Helm using the command below.
-
+````sh
 $ helm init --service-account=tiller \
    --stable-repo-url=https://kubernetes-charts.storage.googleapis.com \
    --upgrade \
@@ -90,16 +87,16 @@ $ helm init --service-account=tiller \
    --replicas=1 \
    --history-max=100 \
    --wait
-   
+````   
 Below is the output from the helm init command.
-
+````
 you see a messgage  -> tiller is installed in your kubernetes cluster
 
-The option –tiller-image can be used to install particular version of Tiller, example:
---tiller-image=gcr.io/kubernetes-helm/tiller:v2.16.0
+````
 The initialization will also set up local configuration in $HELM_HOME (default ~/.helm/)
-
+````
 $ ls ~/.helm 
+````
 cache  plugins  repository  starters
 
 On the kubernetes end, you should see a new deployment called tiller-deploy.
