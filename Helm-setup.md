@@ -101,6 +101,7 @@ On the kubernetes end, you should see a new deployment called tiller-deploy.
 kubectl get deployment  -n kube-system
 ````  
 NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+````
 metrics-server           1/1     1            1           20d
 local-path-provisioner   1/1     1            1           20d
 coredns                  1/1     1            1           20d
