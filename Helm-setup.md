@@ -1,4 +1,4 @@
-####### Setting up Helm on kubernetes cluster
+#### Setting up Helm on kubernetes cluster
 
 
 Helm is a tool created to streamline the installation and management of Kubernetes applications. You can think of Helm like the YUM / APT or Homebrew package managers for Kubernetes.
